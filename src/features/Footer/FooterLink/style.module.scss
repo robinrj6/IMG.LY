@@ -1,0 +1,18 @@
+@use "../../../styles/typography";
+@use "../../../styles/mixins";
+
+.root {
+  @include typography.imgly-link;
+  @include mixins.focus;
+
+  display: inline-block;
+  color: var(--imgly-white-light-color);
+  text-decoration: none;
+  white-space: nowrap;
+
+  &:hover,
+  &:focus {
+    color: var(--imgly-primary-color);
+    text-decoration: none;
+  }
+}

@@ -1,0 +1,8 @@
+@use "../../styles/button-themes" as *;
+@use "../../styles/mixins" as *;
+@use "./base.module" as *;
+
+.root {
+  @include button;
+  @include themes;
+}

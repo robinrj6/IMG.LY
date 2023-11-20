@@ -1,0 +1,27 @@
+import { Meta, Story } from "@storybook/blocks";
+
+import * as HeaderContactSalesButtonStories from "./HeaderContactSalesButton.stories";
+
+<Meta of={HeaderContactSalesButtonStories} />
+
+# Header Contact Sales Button
+
+The `Contact Sales` button used in the Header.
+
+<Story of={HeaderContactSalesButtonStories.Default} />
+
+## Import
+
+```tsx
+import { HeaderContactSalesButton } from "@imgly-labs/imgly-website-components";
+```
+
+## Usage
+
+```tsx
+<HeaderWrapper>
+  <HeaderContainer>
+    <HeaderContactSalesButton />
+  </HeaderContainer>
+</HeaderWrapper>
+```

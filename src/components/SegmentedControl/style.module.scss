@@ -1,0 +1,77 @@
+@use "../../styles/button-themes" as *;
+@use "../../styles/mixins" as *;
+@use "../Button/base.module" as *;
+
+.root {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.description {
+  font-family: var(--imgly-font-family-ibm-sans);
+  font-size: 0.875rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.25rem; /* 142.857% */
+  letter-spacing: 0.0262rem;
+  text-transform: uppercase;
+  color: var(--imgly-segmented-control-color);
+  white-space: nowrap;
+}
+
+.options {
+  display: flex;
+  padding: 0.25rem;
+  background: var(--imgly-segmented-control-bg);
+  border: var(--segmented-control-border);
+  border-radius: var(--imgly-radius-m);
+
+  &__is_disabled {
+    border: var(--segmented-control-disabled-border);
+    background: var(--segmented-control-disabled-bg);
+  }
+
+  &__is_small {
+    padding: 0.125rem;
+  }
+}
+
+.label {
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+.radio {
+  appearance: none;
+  width: 0;
+  height: 0;
+  margin: 0;
+  padding: 0;
+
+  &:focus-visible + div {
+    box-shadow: var(--imgly-focus-shadow);
+    border-radius: var(--imgly-radius-m);
+  }
+}
+
+.button {
+  @include button;
+  @include themes;
+
+  &__is_small {
+    height: 1.75rem;
+    padding: 0 0.38rem;
+    border-radius: var(--imgly-radius-sm);
+    min-width: unset;
+  }
+
+  &__is_text {
+    color: var(--segmented-control-color);
+  }
+
+  &__is_disabled {
+    pointer-events: none;
+  }
+}

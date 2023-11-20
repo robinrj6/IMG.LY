@@ -1,0 +1,25 @@
+import { Meta } from "@storybook/blocks";
+
+<Meta title="Components/Header/Header Careers" />
+
+# Header Careers
+
+The "Remote works! Join us." banner in the `Header`.
+
+## Import
+
+```tsx
+import { HeaderCareers } from "@imgly-labs/imgly-website-components";
+```
+
+## Usage
+
+This component is positioned absolutely and has different states for resolutions greater than `lg`, between `lg` and `sm`, and below `sm`.
+
+> By default `HeaderWrapper` will be the relative anchor element which will need a top margin of `2rem` for the `sm` breakpoint.
+
+```tsx
+<HeaderWrapper>
+  <HeaderCareers />
+</HeaderWrapper>
+```

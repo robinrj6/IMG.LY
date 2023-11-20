@@ -1,0 +1,79 @@
+@use "../../../styles/mixins" as *;
+@use "../../../styles/typography" as *;
+@use "../dropdown.module";
+
+.content {
+  width: 56rem;
+
+  // note: important that this include comes after the overwrite for tablet/mobile styling
+  @include dropdown.menu;
+}
+
+.container {
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 1.5rem;
+  background-image: var(--imgly-header-dropdown-gradient);
+
+  @include lg {
+    gap: 0.5rem;
+    padding: 0.5rem;
+    background-image: none;
+  }
+}
+
+.row {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 1fr;
+  gap: 1rem;
+
+  @include lg {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+  }
+}
+
+.subheader {
+  @include imgly-overline-small;
+
+  color: var(--imgly-black-light-color);
+
+  @include lg {
+    display: none;
+  }
+}
+
+.note {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 2.5rem 0 1rem;
+  margin-top: 0.5rem;
+  gap: 1rem;
+  width: 100%;
+  border-radius: var(--imgly-radius-xl);
+
+  &__text {
+    @include imgly-paragraph-small;
+
+    text-align: center;
+    color: var(--imgly-black-color);
+  }
+
+  &__link {
+    @include focus;
+    @include imgly-paragraph-small;
+    @include link;
+
+    text-align: center;
+  }
+
+  @include lg {
+    display: none;
+  }
+}

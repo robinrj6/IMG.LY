@@ -1,0 +1,118 @@
+@use "../../../styles/mixins" as *;
+@use "../../../styles/typography" as *;
+@use "../dropdown.module.scss";
+
+.content {
+  width: 39.5rem;
+
+  // note: important that this include comes after the overwrite for tablet/mobile styling
+  @include dropdown.menu;
+}
+
+.container {
+  z-index: 1;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+  padding: 1.5rem;
+
+  @include lg {
+    margin-top: 0.5rem;
+    padding: 0 0.5rem 0.5rem;
+    flex-direction: column;
+    gap: 0;
+  }
+}
+
+.wrapper {
+  display: flex;
+  gap: 1rem;
+  transition: opacity 0.2s;
+
+  @include lg {
+    flex-direction: column;
+    width: 100%;
+    gap: 0;
+  }
+}
+
+.image {
+  width: 11.43rem;
+  height: auto;
+  position: relative;
+  left: -2.875rem;
+  bottom: -2.25rem;
+
+  @include lg {
+    position: absolute;
+    inset: -1.3125rem -3.9375rem auto auto;
+    width: 11.4375rem;
+    height: 9.6875rem;
+    opacity: 0.5;
+  }
+}
+
+.kits {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 13.3125rem;
+  margin-right: 1.5rem;
+  margin-bottom: 1rem;
+  opacity: 0.65;
+
+  &:hover {
+    opacity: 1;
+  }
+
+  @include lg {
+    display: none;
+  }
+
+  &__h4 {
+    @include imgly-h4;
+
+    color: var(--imgly-black-color) !important;
+    margin-top: 2.1875rem;
+    margin-bottom: 0;
+    padding: 1rem 0.75rem;
+  }
+
+  &__item {
+    justify-content: space-between;
+  }
+
+  &__button {
+    margin-top: 0.875rem;
+  }
+
+  &__icon {
+    fill: currentColor;
+  }
+}
+
+.container-cesdk {
+  display: flex;
+  gap: 2rem;
+  width: 36.5rem;
+  border-radius: var(--imgly-radius-m);
+  transition: opacity 0.2s;
+  background-image: var(--imgly-header-products-gradient);
+
+  &:hover,
+  &:focus-within {
+    > .kits {
+      opacity: 1;
+    }
+  }
+
+  @include lg {
+    width: 100%;
+    background-image: unset;
+  }
+
+  &__item {
+    width: 100%;
+  }
+}

@@ -1,0 +1,43 @@
+@use "../../styles/mixins" as *;
+@use "../../styles/typography" as *;
+
+.root {
+  @include focus;
+  @include imgly-paragraph-small;
+
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  position: absolute;
+  left: 0;
+  top: 3.25rem;
+  min-height: 1.5rem;
+  margin-left: -0.5rem;
+  padding-right: 0.5rem;
+  padding-left: 0.5rem;
+  background: transparent;
+  color: var(--imgly-primary-color);
+  text-decoration: none;
+  white-space: nowrap;
+
+  &:hover {
+    opacity: 1;
+    color: var(--imgly-primary-color);
+  }
+
+  @include lg {
+    left: 50%;
+    top: auto;
+    margin-left: 0;
+    justify-content: center;
+    transform: translate(-50%, 0);
+  }
+
+  @include sm {
+    inset: -2rem -1rem auto;
+    min-height: 2rem;
+    background: var(--imgly-primary-color);
+    transform: none;
+    color: var(--imgly-white-color);
+  }
+}

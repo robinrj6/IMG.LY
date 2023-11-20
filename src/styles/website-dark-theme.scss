@@ -1,0 +1,148 @@
+/**
+   * Theming for:
+   * - Accent Theme
+   * - Dark Theme
+   */
+.navbarv2 {
+  color: #161617 !important;
+}
+
+/* NavbarV2 Logo (Default State) */
+body.accent-theme .navbarv2 .navbarv2_logo,
+body.dark-theme .navbarv2 .navbarv2_logo {
+  color: #fff !important;
+}
+
+/* NavbarV2 Hamburger Menu (Default State) */
+body.accent-theme .navbarv2 .is--hamburger,
+body.dark-theme .navbarv2 .is--hamburger {
+  color: #fff !important;
+}
+
+/* NavbarV2 Join Us Button (Default State) */
+body.accent-theme .navbarv2 .navbarv2_metalink,
+body.dark-theme .navbarv2 .navbarv2_metalink {
+  color: rgb(0 255 183 / 100%) !important;
+}
+
+/* Navbar (old) */
+body.white-theme .navbar .menu-button .menu-icon {
+  color: #161617 !important;
+}
+
+@media only screen and (min-width: 991px) {
+  /* NavbarV2 Regular Buttons (Default State) */
+  body.accent-theme .navbarv2 .is--navbar,
+  body.dark-theme .navbarv2 .is--navbar {
+    color: #fff !important;
+  }
+
+  /* NavbarV2 Regular Buttons (Hover State) */
+  body.accent-theme .navbarv2 .is--navbar:hover,
+  body.dark-theme .navbarv2 .is--navbar:hover {
+    color: #fff !important;
+    background: rgb(255 255 255 / 25%) !important;
+  }
+
+  /* NavbarV2 CTA Primary Button (Default State) */
+  body.accent-theme .navbarv2 .is--navbar.is--theme-accent,
+  body.dark-theme .navbarv2 .is--navbar.is--theme-accent {
+    color: #161617 !important;
+    border-color: #00ffb7 !important;
+    background: #00ffb7 !important;
+  }
+
+  /* NavbarV2 CTA Primary Buttons (Hover State) */
+  body.accent-theme .navbarv2 .is--navbar.is--theme-accent:hover,
+  body.dark-theme .navbarv2 .is--navbar.is--theme-accent:hover {
+    color: #161617 !important;
+    border-color: #00ffb7 !important;
+    background: rgb(128 255 219 / 65%) !important;
+  }
+
+  /* NavbarV2 CTA Secondary Button (Default State) */
+  body.accent-theme .navbarv2 .is--navbar.is--theme-accent2,
+  body.dark-theme .navbarv2 .is--navbar.is--theme-accent2 {
+    color: #fff !important;
+    border-color: rgb(255 255 255 / 30%) !important;
+  }
+
+  /* NavbarV2 CTA Secondary Button (Hover State) */
+  body.accent-theme .navbarv2 .is--navbar.is--theme-accent2:hover,
+  body.dark-theme .navbarv2 .is--navbar.is--theme-accent2:hover {
+    color: #fff !important;
+    border-color: rgb(255 255 255 / 30%) !important;
+    background: rgb(255 255 255 / 25%) !important;
+  }
+
+  /* Navbar (old) */
+  body.dark-theme .navbar .accent,
+  body.white-theme .navbar .accent {
+    background: #471aff !important;
+    box-shadow: 0 4px 10px 1px rgb(47 18 165 / 25%) !important;
+    color: #fff;
+    border: none;
+  }
+
+  body.dark-theme .navbar .accent:hover,
+  body.white-theme .navbar .accent:hover {
+    background: rgb(71 26 255 / 65%) !important;
+    border: none;
+  }
+
+  body.white-theme .navbar .nav-item,
+  body.white-theme .navbar .menu-button {
+    color: #161617 !important;
+  }
+
+  body.white-theme .navbar .nav-item:hover {
+    background: rgb(0 0 0 / 12%) !important;
+    color: #161617 !important;
+  }
+
+  body.white-theme .navbar .nav-item:focus {
+    border-color: rgb(0 0 0 / 24%) !important;
+  }
+
+  .navbarv2 .w-dropdown-list,
+  .nav-dropdown-list {
+    visibility: hidden;
+  }
+
+  .navbarv2 .w-dropdown-list.w--open,
+  .nav-dropdown-list.w--open {
+    visibility: visible;
+  }
+
+  .use-case-button.active .cc-circle {
+    background: #2b55ff;
+  }
+}
+
+// Website Components
+
+body.accent-theme .IMGLY__header_logo,
+body.dark-theme .IMGLY__header_logo {
+  color: #fff !important;
+}
+
+body.accent-theme .IMGLY__header_hamburger,
+body.dark-theme .IMGLY__header_hamburger {
+  color: #fff !important;
+}
+
+body.accent-theme .IMGLY__Header_Item,
+body.dark-theme .IMGLY__Header_Item {
+  color: #fff !important;
+}
+
+body.accent-theme .IMGLY__Header_Item:hover,
+body.dark-theme .IMGLY__Header_Item:hover {
+  color: #fff !important;
+  background: rgb(255 255 255 / 25%) !important;
+}
+
+body.accent-theme .IMGLY__Header_Careers,
+body.dark-theme .IMGLY__Header_Careers {
+  color: rgb(0 255 183 / 100%) !important;
+}

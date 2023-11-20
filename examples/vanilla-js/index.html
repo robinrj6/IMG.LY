@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Example</title>
+
+    <script
+      crossorigin
+      src="https://unpkg.com/react@18/umd/react.production.min.js"
+    ></script>
+    <script
+      crossorigin
+      src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"
+    ></script>
+
+    <link
+      rel="preload"
+      href="./dist/imgly-website-components.css"
+      as="style"
+      onload="this.onload=null;this.rel='stylesheet'"
+    />
+    <noscript
+      ><link rel="stylesheet" href="./dist/imgly-website-components.css"
+    /></noscript>
+  </head>
+  <body>
+    <header
+      id="imgly-website-components-header"
+      data-testid="imgly-website-components-header"
+    ></header>
+    <footer
+      id="imgly-website-components-footer"
+      data-testid="imgly-website-components-footer"
+    ></footer>
+    <div id="imgly-website-components-cookies"></div>
+    <script src="./dist/imgly-website-components.umd.cjs"></script>
+  </body>
+</html>

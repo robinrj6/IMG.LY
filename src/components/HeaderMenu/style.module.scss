@@ -1,0 +1,70 @@
+@use "../../styles/mixins" as *;
+@use "../../styles/typography" as *;
+@use "../../styles/button-themes" as *;
+@use "../Button/base.module" as *;
+
+.root {
+  display: none;
+
+  @include lg {
+    display: block;
+  }
+}
+
+.popover {
+  position: absolute;
+  right: 0.5rem;
+  top: 3rem;
+  width: 100%;
+  max-width: 30rem;
+  min-width: 15rem;
+
+  &:focus {
+    outline: none;
+  }
+}
+
+.container {
+  min-width: auto;
+  overflow: hidden;
+  box-sizing: border-box;
+  text-align: left;
+  background: var(--imgly-header-menu-bg);
+  border-radius: var(--imgly-radius-xxl);
+  box-shadow: var(--imgly-header-menu-shadow);
+
+  @include lg {
+    overflow: hidden;
+    margin-top: 1px;
+    padding: 1rem;
+  }
+
+  [data-enter] & {
+    opacity: 1;
+  }
+}
+
+.button {
+  @include button;
+  @include imgly-icon;
+  @include themes;
+
+  padding: 0;
+  min-width: unset;
+  width: 3rem;
+  height: 3rem;
+
+  &::before {
+    content: "\e602";
+  }
+
+  &__open {
+    color: var(--imgly-primary-color);
+  }
+
+  &__is_small {
+    font-size: 1.5rem;
+    width: 2rem;
+    height: 2rem;
+  }
+}

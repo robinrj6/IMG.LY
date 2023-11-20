@@ -1,0 +1,47 @@
+@mixin create-theme($theme) {
+  color: var(--imgly-button-#{$theme}-color);
+  border: var(--imgly-button-#{$theme}-border);
+  background: var(--imgly-button-#{$theme}-bg);
+  background-image: var(--imgly-button-#{$theme}-img);
+
+  &:hover {
+    // overwrite system styling
+    color: var(--imgly-button-#{$theme}-color);
+    background: var(--imgly-button-#{$theme}-hover-bg);
+    background-image: var(--imgly-button-#{$theme}-hover-img);
+  }
+}
+
+@mixin themes {
+  &__is_primary {
+    @include create-theme("primary");
+
+    // note: the primary button gets it's own focus shadow
+    // since the color is too similar to the background color
+    &:focus-visible {
+      box-shadow: var(--imgly-button-primary-focus-shadow);
+    }
+  }
+
+  &__is_secondary {
+    @include create-theme("secondary");
+  }
+
+  &__is_tertiary {
+    @include create-theme("tertiary");
+  }
+
+  &__is_text {
+    color: var(--imgly-button-text-color);
+    border: var(--imgly-button-text-border);
+
+    &:hover {
+      // overwrite system styling
+      color: var(--imgly-button-text-color);
+      border-top-color: var(--imgly-button-text-hover-border-top-color);
+      border-bottom-color: var(--imgly-button-text-hover-border-bottom-color);
+      background: var(--imgly-button-text-hover-bg);
+      background-image: var(--imgly-button-text-hover-img);
+    }
+  }
+}

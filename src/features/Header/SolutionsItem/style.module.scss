@@ -1,0 +1,61 @@
+@use "../../../styles/mixins" as *;
+@use "../../../styles/typography" as *;
+
+.root {
+  @include focus;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  box-sizing: border-box;
+  width: 100%;
+  height: 100%;
+  padding: 1rem 1.5rem 1.5rem;
+  border-radius: var(--imgly-radius-m);
+  text-decoration: none;
+  color: var(--imgly-black-color);
+  cursor: pointer;
+  transition: background-color 0.2s ease-out, box-shadow 0.2s ease-out;
+
+  @include lg {
+    width: 100%;
+    height: auto;
+    padding: 0.5rem 1rem 1rem;
+
+    &:hover {
+      opacity: 1;
+      color: var(--imgly-primary-color);
+    }
+  }
+
+  &:active {
+    color: var(--imgly-primary-light-color);
+  }
+
+  &:hover {
+    background: var(--imgly-primary-lightest-color);
+    color: var(--imgly-primary-color);
+    text-decoration: none;
+  }
+}
+
+.image {
+  @include lg {
+    display: none;
+  }
+}
+
+.name {
+  @include imgly-h5;
+
+  box-sizing: border-box;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.description {
+  @include imgly-button-small;
+
+  box-sizing: border-box;
+}

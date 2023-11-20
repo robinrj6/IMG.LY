@@ -1,0 +1,245 @@
+@mixin imgly-h1 {
+  font-family: var(--imgly-font-family-gt);
+  font-style: normal;
+  font-weight: 700;
+  font-size: 3.75rem;
+  line-height: 4.25rem;
+  letter-spacing: -0.01em;
+}
+
+@mixin imgly-h2 {
+  font-family: var(--imgly-font-family-gt);
+  font-style: normal;
+  font-weight: 700;
+  font-size: 3.25rem;
+  line-height: 3.75rem;
+  letter-spacing: -0.01em;
+}
+
+@mixin imgly-h2-body-text {
+  font-family: var(--imgly-font-family-gt);
+  font-style: normal;
+  font-weight: 700;
+  font-size: 2.375rem;
+  line-height: 3rem;
+}
+
+@mixin imgly-h3 {
+  font-family: var(--imgly-font-family-gt);
+  font-style: normal;
+  font-weight: 700;
+  font-size: 2.25rem;
+  line-height: 2.75rem;
+}
+
+@mixin imgly-h3-body-text {
+  font-family: var(--imgly-font-family-gt);
+  font-style: normal;
+  font-weight: 700;
+  font-size: 1.8125rem;
+  line-height: 2.5rem;
+}
+
+@mixin imgly-h4 {
+  font-family: var(--imgly-font-family-gt);
+  font-style: normal;
+  font-weight: 700;
+  font-size: 1.375rem;
+  line-height: 2rem;
+  letter-spacing: 0.01em;
+}
+
+@mixin imgly-h5 {
+  font-family: var(--imgly-font-family-gt);
+  font-style: normal;
+  font-weight: 700;
+  font-size: 1.125rem;
+  line-height: 1.75rem;
+  letter-spacing: 0.02em;
+}
+
+@mixin imgly-paragraph-big {
+  font-family: var(--imgly-font-family-ibm-sans);
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1.375rem;
+  line-height: 2rem;
+}
+
+@mixin imgly-paragraph {
+  font-family: var(--imgly-font-family-ibm-sans);
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1.125rem;
+  line-height: 1.75rem;
+  letter-spacing: 0.01em;
+}
+
+@mixin imgly-paragraph-body-text {
+  font-family: var(--imgly-font-family-ibm-sans);
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1.375rem;
+  line-height: 2.5rem;
+}
+
+@mixin imgly-paragraph-small {
+  font-family: var(--imgly-font-family-ibm-sans);
+  font-style: normal;
+  font-weight: 400;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  letter-spacing: 0.02em;
+}
+
+@mixin imgly-link {
+  font-family: var(--imgly-font-family-ibm-sans);
+  font-style: normal;
+  font-weight: 500;
+  font-size: 1.125rem;
+  line-height: 1.75rem;
+  letter-spacing: 0.01em;
+}
+
+@mixin imgly-subline {
+  font-family: var(--imgly-font-family-ibm-sans);
+  font-style: normal;
+  font-weight: 500;
+  font-size: 1.375rem;
+  line-height: 2rem;
+}
+
+@mixin imgly-subline-body-text {
+  font-family: var(--imgly-font-family-ibm-sans);
+  font-style: normal;
+  font-weight: 500;
+  font-size: 1.375rem;
+  line-height: 2.5rem;
+}
+
+@mixin imgly-overline {
+  font-family: var(--imgly-font-family-ibm-sans);
+  font-style: normal;
+  font-weight: 500;
+  font-size: 1.125rem;
+  line-height: 1.75rem;
+  letter-spacing: 0.03em;
+  text-indent: 0.125rem;
+  text-transform: uppercase;
+}
+
+@mixin imgly-overline-small {
+  font-family: var(--imgly-font-family-ibm-sans);
+  font-style: normal;
+  font-weight: 400;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  letter-spacing: 0.03em;
+  text-indent: 0.125rem;
+  text-transform: uppercase;
+}
+
+@mixin imgly-button {
+  font-family: var(--imgly-font-family-ibm-sans);
+  font-style: normal;
+  font-weight: 500;
+  font-size: 1.125rem;
+  line-height: 1.75rem;
+  letter-spacing: 0.01em;
+}
+
+@mixin imgly-button-small {
+  font-family: var(--imgly-font-family-ibm-sans);
+  font-style: normal;
+  font-weight: 500;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  letter-spacing: 0.02em;
+}
+
+@mixin imgly-icon {
+  font-weight: 400;
+  font-family: webflow-icons, monospace !important;
+  font-style: normal;
+  font-variant: normal;
+  font-size: 1.5rem;
+  line-height: 1;
+  text-transform: none;
+  speak: none;
+}
+
+.imgly--typo-h1 {
+  @include imgly-h1;
+}
+
+.imgly--typo-h2 {
+  @include imgly-h2;
+}
+
+.imgly--typo-h2-body-text {
+  @include imgly-h2-body-text;
+}
+
+.imgly--typo-h3 {
+  @include imgly-h3;
+}
+
+.imgly--typo-h3-body-text {
+  @include imgly-h3-body-text;
+}
+
+.imgly--typo-h4 {
+  @include imgly-h4;
+}
+
+.imgly--typo-h5 {
+  @include imgly-h5;
+}
+
+.imgly--typo-paragraph-big {
+  @include imgly-paragraph-big;
+}
+
+.imgly--typo-paragraph {
+  @include imgly-paragraph;
+}
+
+.imgly--typo-paragraph-body-text {
+  @include imgly-paragraph-body-text;
+}
+
+.imgly--typo-paragraph-small {
+  @include imgly-paragraph-small;
+}
+
+.imgly--typo-link {
+  @include imgly-link;
+}
+
+.imgly--typo-subline {
+  @include imgly-subline;
+}
+
+.imgly--typo-subline-body-text {
+  @include imgly-subline-body-text;
+}
+
+.imgly--typo-overline {
+  @include imgly-overline;
+}
+
+.imgly--typo-overline-small {
+  @include imgly-overline-small;
+}
+
+.imgly--typo-button {
+  @include imgly-button;
+}
+
+.imgly--typo-button-small {
+  @include imgly-button-small;
+}
+
+.imgly--typo-icon {
+  @include imgly-icon;
+}

@@ -1,0 +1,39 @@
+import { Meta, Story } from "@storybook/blocks";
+
+import * as FooterStories from "./Footer.stories";
+
+<Meta of={FooterStories} />
+
+# Footer
+
+The Footer component is used across all IMG.LY websites.
+
+<Story of={FooterStories.Default} />
+
+## Import
+
+```tsx
+import { Footer } from "@imgly-labs/imgly-website-components";
+```
+
+or
+
+```html
+<footer id="imgly-website-components-footer"></footer>
+```
+
+## Props
+
+| Name                   | Type    | Default                | Description                                          |
+| ---------------------- | ------- | ---------------------- | ---------------------------------------------------- |
+| `hiring`/`data-hiring` | boolean | defined in `config.ts` | Display the `HIRING` tag next to the `Careers` link. |
+
+```tsx
+<Footer hiring />
+```
+
+or
+
+```html
+<footer id="imgly-website-components-footer" data-hiring="true"></footer>
+```

@@ -1,0 +1,16 @@
+@use "../../../styles/typography";
+
+.root {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.heading {
+  @include typography.imgly-h5;
+
+  margin-top: 0;
+  margin-bottom: 0.25rem;
+  color: var(--imgly-white-color);
+  text-transform: none;
+}

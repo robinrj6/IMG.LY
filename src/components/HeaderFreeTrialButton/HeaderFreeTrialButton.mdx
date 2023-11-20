@@ -1,0 +1,27 @@
+import { Meta, Story } from "@storybook/blocks";
+
+import * as HeaderFreeTrialButtonStories from "./HeaderFreeTrialButton.stories";
+
+<Meta of={HeaderFreeTrialButtonStories} />
+
+# Header Free Trial Button
+
+The `Free Trial` button used in the Header.
+
+<Story of={HeaderFreeTrialButtonStories.Default} />
+
+## Import
+
+```tsx
+import { HeaderFreeTrialButton } from "@imgly-labs/imgly-website-components";
+```
+
+## Usage
+
+```tsx
+<HeaderWrapper>
+  <HeaderContainer>
+    <HeaderFreeTrialButton />
+  </HeaderContainer>
+</HeaderWrapper>
+```

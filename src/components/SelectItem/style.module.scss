@@ -1,0 +1,93 @@
+@use "../../styles/typography" as *;
+@use "../../styles/mixins" as *;
+
+@mixin check-mark {
+  content: "";
+  box-sizing: content-box;
+  border-width: 0 2px 2px 0;
+  position: absolute;
+  display: inline-block;
+  left: 3px;
+  bottom: 3px;
+  width: 3px;
+  height: 6px;
+  border-style: solid;
+  transform: rotate(45deg);
+}
+
+.selectItemCheckbox {
+  box-sizing: content-box;
+  appearance: none;
+  flex-grow: 0;
+  cursor: pointer;
+  width: 0.75rem;
+  height: 0.75rem;
+  margin: 0;
+  position: relative;
+}
+
+.selectItem {
+  @include imgly-button-small;
+
+  scroll-margin: 0.5rem;
+  display: flex;
+  flex-grow: 1;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  color: var(--imgly-black-light-color);
+
+  &__checked {
+    color: var(--imgly-black-color);
+  }
+
+  &__multi .selectItemCheckbox {
+    border: var(--imgly-checkbox-border);
+    border-radius: var(--imgly-radius-xs);
+  }
+  &__multi#{&}:hover .selectItemCheckbox {
+    border: var(--imgly-checkbox-border-hover);
+  }
+
+  &__multi#{&}__checked {
+    .selectItemCheckbox {
+      border-color: var(--imgly-black-color);
+      background: var(--imgly-select-multi-checked-bg);
+    }
+
+    .selectItemCheckbox::before {
+      @include check-mark;
+
+      border-color: var(--imgly-white-color);
+    }
+  }
+
+  &__single#{&}__checked {
+    .selectItemCheckbox::before {
+      @include check-mark;
+    }
+  }
+
+  &__single:hover {
+    .selectItemCheckbox::before {
+      @include check-mark;
+    }
+  }
+
+  &:hover {
+    color: var(--imgly-black-color);
+  }
+
+  &[data-active-item] {
+    text-decoration: underline;
+    text-decoration-color: var(--imgly-primary-alternative-color);
+    text-decoration-thickness: 2px;
+  }
+}
+
+.selectItemLabelWrapper {
+  display: flex;
+  flex-grow: 1;
+  gap: 0.5rem;
+  align-items: center;
+}

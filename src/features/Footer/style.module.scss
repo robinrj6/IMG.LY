@@ -1,0 +1,152 @@
+@use "../../styles/mixins" as *;
+@use "../../styles/typography" as *;
+
+.footer {
+  position: relative;
+  padding: 8rem 2rem;
+  display: block;
+  margin-right: 0;
+  margin-left: 0;
+  background: var(--imgly-dark-bg);
+  box-shadow: var(--imgly-footer-shadow);
+
+  a:focus,
+  a:hover {
+    color: var(--imgly-primary-alternative-color);
+  }
+}
+
+.container {
+  max-width: 65.5rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.grid {
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: minmax(auto, 1fr);
+  grid-auto-rows: minmax(auto, 1fr);
+  grid-gap: 2.5rem 2rem;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto;
+
+  @include lg {
+    grid-auto-columns: minmax(auto, 1fr);
+    grid-auto-rows: minmax(auto, 1fr);
+  }
+
+  @include md {
+    grid-auto-flow: row dense;
+    grid-auto-columns: minmax(auto, 1fr);
+    grid-auto-rows: minmax(auto, auto);
+    grid-template-columns: 1fr 1fr;
+  }
+
+  @include sm {
+    grid-template-columns: 1fr;
+  }
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 2.5rem;
+
+  &__is_first {
+    justify-content: space-between;
+
+    @include sm {
+      order: 9999;
+    }
+  }
+}
+
+.icon {
+  width: 100%;
+  height: 100%;
+
+  // disabled pointer events on the icon so that the anchor is the onclick target
+  pointer-events: none;
+}
+
+.company {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+
+  @include md {
+    gap: 0.5rem;
+  }
+
+  &__logo {
+    display: block;
+    max-width: 110px;
+    height: 1.5rem;
+    margin-bottom: 1rem;
+
+    @include sm {
+      display: none;
+    }
+  }
+}
+
+.legal {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+
+  @include md {
+    gap: 0.5rem;
+  }
+}
+
+.socials {
+  display: flex;
+  flex: 0 auto;
+  flex-wrap: wrap;
+  grid-gap: 0.5rem;
+
+  &__item {
+    width: 2rem;
+    height: 2rem;
+  }
+
+  &__copyright {
+    @include imgly-paragraph;
+
+    flex: 0 0 auto;
+    width: 100%;
+    color: var(--imgly-white-light-color);
+    padding-left: 0.5rem;
+  }
+}
+
+.logo {
+  &__is_mobile {
+    display: none;
+
+    @include sm {
+      display: block;
+      height: 1.5rem;
+    }
+  }
+}
+
+.careers {
+  &::after {
+    content: "hiring";
+    background: var(--imgly-primary-alternative-lighter-color);
+    color: var(--imgly-footer-hiring-color);
+    width: 80px;
+    height: 1.75rem;
+    padding: 0.25rem 0.75rem;
+    margin-left: 0.75rem;
+    border-radius: var(--imgly-radius-round);
+    box-shadow: var(--imgly-footer-hiring-shadow);
+    font-size: 0.875rem;
+    font-weight: 500;
+    text-transform: uppercase;
+  }
+}

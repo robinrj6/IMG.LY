@@ -1,0 +1,60 @@
+import { Meta, Story } from "@storybook/blocks";
+
+import * as CookiesStories from "./Cookies.stories";
+
+<Meta of={CookiesStories} />
+
+# Cookies
+
+The Cookies component is used across all IMG.LY websites.
+
+<Story of={CookiesStories.Default} />
+
+## Import
+
+```tsx
+import { Cookies } from "@imgly-labs/imgly-website-components";
+```
+
+or
+
+```html
+<div id="imgly-website-components-cookies"></div>
+```
+
+## Usage
+
+This component can be used standalone or as a parent that exposes the `CookieContext` to its children.
+
+The `CookieContext` will provide information on which cookie types are currently allowed if you need this information for a specific widget or package.
+
+_index.tsx_
+
+```tsx
+import { Cookies } from "@imgly-labs/imgly-website-components";
+
+import { App } from "./App";
+
+const Index = ({ children }) => {
+  return (
+    <Cookies>
+      <App />
+    </Cookies>
+  );
+};
+```
+
+_App.tsx_
+
+```tsx
+import { useContext } from "react";
+
+import { CookieContext } from "@imgly-labs/imgly-website-components";
+
+const App = () => {
+  const { trackFunctionality, trackAdvertisement, trackAnalytics } =
+    useContext(CookieContext);
+
+  return <div>App</div>;
+};
+```

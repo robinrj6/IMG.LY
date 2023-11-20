@@ -1,0 +1,27 @@
+import { Meta, Story } from "@storybook/blocks";
+
+import * as HeaderPricingButton from "./HeaderPricingButton.stories";
+
+<Meta of={HeaderPricingButton} />
+
+# Header Pricing Button
+
+The `Pricing` button used in the Header.
+
+<Story of={HeaderPricingButton.Default} />
+
+## Import
+
+```tsx
+import { HeaderPricingButton } from "@imgly-labs/imgly-website-components";
+```
+
+## Usage
+
+```tsx
+<HeaderWrapper>
+  <HeaderContainer>
+    <HeaderPricingButton />
+  </HeaderContainer>
+</HeaderWrapper>
+```

@@ -1,0 +1,27 @@
+import { Meta, Story } from "@storybook/blocks";
+
+import * as HeaderBlogButton from "./HeaderBlogButton.stories";
+
+<Meta of={HeaderBlogButton} />
+
+# Header Blog Button
+
+The `Blog` button used in the Header.
+
+<Story of={HeaderBlogButton.Default} />
+
+## Import
+
+```tsx
+import { HeaderBlogButton } from "@imgly-labs/imgly-website-components";
+```
+
+## Usage
+
+```tsx
+<HeaderWrapper>
+  <HeaderContainer>
+    <HeaderBlogButton />
+  </HeaderContainer>
+</HeaderWrapper>
+```

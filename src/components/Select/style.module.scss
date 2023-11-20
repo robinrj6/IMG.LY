@@ -1,0 +1,21 @@
+@use "../../styles/mixins" as *;
+
+.popover {
+  @include popover;
+  @include focus;
+}
+
+.select {
+  @include focus;
+}
+
+.button {
+  &__active {
+    color: var(--imgly-select-multi-active-color) !important;
+    border: var(--imgly-select-multi-active-border) !important;
+
+    &:hover {
+      background: var(--imgly-select-multi-active-hover-bg) !important;
+    }
+  }
+}
