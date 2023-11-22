@@ -11,6 +11,8 @@ import { Products } from '../Products';
 import { Solutions } from '../Solutions';
 
 import classes from './style.module.scss';
+import { Resources } from '../Resources';
+
 
 interface Props {
   small?: boolean;
@@ -31,6 +33,7 @@ export const HeaderChildren: React.FC<Props> = ({ small }) => {
           className={classNames(classes.menu__blog, 'IMGLY__Header_Item')}
           small={small}
         />
+        <Resources/>
       </div>
       <div className={classes.buttons}>
         <HeaderContactSalesButton

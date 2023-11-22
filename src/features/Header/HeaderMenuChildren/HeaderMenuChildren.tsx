@@ -10,6 +10,7 @@ import { Products } from '../Products';
 import { Solutions } from '../Solutions';
 
 import classes from './style.module.scss';
+import { Resources } from '../Resources';
 
 /**
  * Children of HeaderMenu used in Header.
@@ -23,6 +24,7 @@ export const HeaderMenuChildren: React.FC = () => {
         <Docs />
         <HeaderPricingButton className={classes.menu__item} />
         <HeaderBlogButton className={classes.menu__item} />
+        <Resources/>
       </div>
       <div className={classes.buttons}>
         <HeaderContactSalesButton

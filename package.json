@@ -6,7 +6,7 @@
   "scripts": {
     "build:esm": "tsc && vite build",
     "build:umd": "tsc && vite build -c vite.config.umd.js",
-    "storybook": "storybook dev -p 6006 --no-open -h dev.img.ly",
+    "storybook": "storybook dev -p 6006 --no-open -h 127.0.0.1",
     "storybook:build": "storybook build -o docs",
     "lint:css": "stylelint '**/*.scss'",
     "lint:ts": "eslint --ext .ts,.tsx .",

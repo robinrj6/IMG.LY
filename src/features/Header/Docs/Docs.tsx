@@ -32,7 +32,9 @@ export const Docs: React.FC<Props> = ({ open, small, buttonClassName }) => {
       >
         <List className={classes.container}>
           {Object.values(Links.GuidesDeveloperLinks).map(docs => {
+            
             const items = docs.map(({ name, url }) => {
+              
               if (!url) {
                 return (
                   <div
@@ -48,7 +50,9 @@ export const Docs: React.FC<Props> = ({ open, small, buttonClassName }) => {
                 );
               }
               return <DocsItem key={name} name={name} url={url} />;
-            });
+            }
+            );
+            console.log(items);
 
             return (
               <div key={docs[0].name} className={classes.column}>
