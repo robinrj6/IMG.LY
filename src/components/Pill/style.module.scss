@@ -1,0 +1,18 @@
+.root {
+    position: absolute;
+    border-radius: 1.25rem;
+    left: 0.5rem;
+    bottom: 1rem;
+    background-color: var(--imgly-white-color);
+    color: var(--imgly-black-light-color);
+    padding: 0 .5rem;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    font-feature-settings: 'clig' off, 'liga' off;
+    font-family: var(--imgly-font-family-ibm-sans);
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 20px;
+}

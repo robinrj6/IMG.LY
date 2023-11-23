@@ -1,0 +1,68 @@
+@use "../../../styles/mixins" as *;
+@use "../../../styles/typography" as *;
+@use "../dropdown.module.scss";
+
+.content {
+    @include dropdown.menu;
+    // margin-left: 15rem;
+    align-items: flex-start;
+    width: auto;
+    height: auto;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    gap: 1rem;
+    padding: 1.5rem;
+    background-image: var(--imgly-header-dropdown-gradient);
+
+    @include lg {
+        grid-template-columns: 1fr;
+        gap: 0.5rem;
+        padding: 0 0.5rem 0.5rem;
+        background-image: none;
+    }
+}
+
+.heading{
+    padding: 1rem ;
+    color: rgba(22, 22, 23, 0.65);
+    font-size: 14px;
+    font-family: var(--imgly-font-family-ibm-sans);
+    font-weight: 500;
+    text-transform: uppercase;
+    line-height: 20px;
+    letter-spacing: 0.42px;
+    word-wrap: break-word
+}
+.featured{
+    padding: 1rem 2rem;
+}
+.wrapper {
+    display: flex;
+}
+
+.container_featured {
+    background: #f4f4f5;
+    width: auto;
+    margin: 1.5rem;
+    border-radius: 8px;
+}
+
+.frame {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-column-gap: 8px;
+    grid-row-gap: 8px;
+    margin: 8px;
+}
+
+.div1 {
+    height: 18.75rem;
+    width: 16.875rem;
+    // border: 1px solid #f30808;
+}
+

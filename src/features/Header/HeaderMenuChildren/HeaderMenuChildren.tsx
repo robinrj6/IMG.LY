@@ -23,7 +23,7 @@ export const HeaderMenuChildren: React.FC = () => {
         <Solutions />
         <Docs />
         <HeaderPricingButton className={classes.menu__item} />
-        <HeaderBlogButton className={classes.menu__item} />
+        {/* <HeaderBlogButton className={classes.menu__item} /> */}
         <Resources/>
       </div>
       <div className={classes.buttons}>

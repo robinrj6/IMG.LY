@@ -205,6 +205,25 @@ const GuidesDeveloperLinks: Record<
   cesdk: CESDKDocs,
 };
 
+//Resources dropdown
+const ResourcesLinkItems = [
+  { name: 'Resources', url: null },
+  { name: 'Blog', url: 'https://img.ly/blog/' },
+  { name: 'Webinars', url: 'https://img.ly/webinars/' },
+  { name: 'White Papers', url: 'https://img.ly/white-papers/' },
+  { name: 'Knowledge Base', url: 'https://img.ly/knowledge-base/' },
+  { name: 'Partners', url: 'https://img.ly/partners/' },
+  { name: 'Customers', url: 'https://img.ly/customers/' },
+  { name: 'Support', url: 'https://img.ly/support/' },
+];
+
+const ResourcesLinks: Record<
+  string,
+  { name: string; url: string | null }[]
+> = {
+  links: ResourcesLinkItems,
+};
+
 const ShowcaseItems = [
   ApparelUIShowcase,
   PostcardUIShowcase,
@@ -300,4 +319,5 @@ export const Links = {
   Careers,
   TOS,
   PrivacyPolicy,
+  ResourcesLinks,
 };

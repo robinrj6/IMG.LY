@@ -29,10 +29,10 @@ export const HeaderChildren: React.FC<Props> = ({ small }) => {
         <Solutions buttonClassName="IMGLY__Header_Item" small={small} />
         <Docs buttonClassName="IMGLY__Header_Item" small={small} />
         <HeaderPricingButton className="IMGLY__Header_Item" small={small} />
-        <HeaderBlogButton
+        {/* <HeaderBlogButton
           className={classNames(classes.menu__blog, 'IMGLY__Header_Item')}
           small={small}
-        />
+        /> */}
         <Resources/>
       </div>
       <div className={classes.buttons}>

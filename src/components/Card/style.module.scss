@@ -1,0 +1,55 @@
+.root {
+    padding: 1rem;
+}
+
+.imgHolder {
+    position: relative;
+}
+
+.image {
+    width: 15rem;
+    align-self: stretch;
+    border-radius: 5px;
+}
+
+.content {
+    margin-top: 12px;
+    gap: 4px;
+}
+
+.heading {
+    margin: 0;
+    color: var(--ci-foreground-black-default);
+    font-family: var(--imgly-font-family-gt);
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 25px;
+    letter-spacing: 0.10px;
+}
+
+.description {
+    margin-top: 4px;
+    overflow: hidden;
+    color: var(--ci-foreground-black-light, rgba(22, 22, 23, 0.65));
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    -webkit-line-clamp: 2;
+    // btn
+    
+    border: none;
+    font-family: var(--imgly-font-family-ibm-sans);
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    letter-spacing: 0.28px;
+
+    @supports (-webkit-line-clamp: 4) {
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: initial;
+        display: -webkit-box;
+        -webkit-line-clamp: 4;
+        -webkit-box-orient: vertical;
+    }
+}

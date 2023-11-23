@@ -52,8 +52,6 @@ export const Docs: React.FC<Props> = ({ open, small, buttonClassName }) => {
               return <DocsItem key={name} name={name} url={url} />;
             }
             );
-            console.log(items);
-
             return (
               <div key={docs[0].name} className={classes.column}>
                 {items}
