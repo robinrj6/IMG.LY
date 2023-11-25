@@ -1,6 +1,8 @@
 .root {
     padding: 1rem;
+    border-radius: 5px;
 }
+
 
 .imgHolder {
     position: relative;
@@ -14,7 +16,9 @@
 
 .content {
     margin-top: 12px;
-    gap: 4px;
+    height: 7.8rem;
+    position: relative;
+    overflow: hidden;
 }
 
 .heading {
@@ -30,26 +34,12 @@
 
 .description {
     margin-top: 4px;
-    overflow: hidden;
     color: var(--ci-foreground-black-light, rgba(22, 22, 23, 0.65));
-    text-overflow: ellipsis;
-    white-space: nowrap;
-    -webkit-line-clamp: 2;
-    // btn
-    
-    border: none;
     font-family: var(--imgly-font-family-ibm-sans);
     font-size: 14px;
     font-style: normal;
     font-weight: 500;
     letter-spacing: 0.28px;
-
-    // @supports (-webkit-line-clamp: 4) {
-    //     overflow: hidden;
-    //     text-overflow: ellipsis;
-    //     white-space: initial;
-    //     display: -webkit-box;
-    //     -webkit-line-clamp: 4;
-    //     -webkit-box-orient: vertical;
-    // }
+    max-height: 100%;
+    overflow: hidden;
 }

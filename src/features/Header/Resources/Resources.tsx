@@ -1,15 +1,13 @@
 import React from "react";
 
-import { ButtonTheme } from "../../../components/Button";
 import { ListItem } from "../../../components/ListItem";
 import { HeaderDropdown } from "../../../components/HeaderDropdown";
 import classNames from "classnames";
 import classes from './style.module.scss';
 import { List } from "../../../components/List";
-import { HeaderBlogButton } from "../../../components/HeaderBlogButton";
-import { DocsItem } from "../DocsItem";
 import { Links } from "../../../utils/constants";
-import { Card } from "../../../components/Card";
+import { ResourceItems } from "../ResourceItems";
+import { ResourceLinksItems } from "../ResourceLinksItems";
 
 
 interface Props {
@@ -33,8 +31,8 @@ export const Resources: React.FC<Props> = ({ open, small, buttonClassName }) => 
                 <div className={classes.wrapper}>
 
                     <List className={classes.container}>
-                        {Object.values(Links.ResourcesLinks).map(docs => {
-                            const items = docs.map(({ name, url }) => {
+                        {Object.values(Links.ResourcesLinks).map(data => {
+                            const items = data.map(({ name, url }) => {
                                 if (!url) {
                                     return (
                                         <div
@@ -45,11 +43,11 @@ export const Resources: React.FC<Props> = ({ open, small, buttonClassName }) => 
                                         </div>
                                     );
                                 }
-                                return <DocsItem key={name} name={name} url={url} />;
+                                return <ResourceLinksItems key={name} name={name} url={url} />;
                             }
                             );
                             return (
-                                <div key={docs[0].name} className={classes.column}>
+                                <div key={data[0].name} className={classes.column}>
                                     {items}
                                 </div>
                             );
@@ -61,10 +59,11 @@ export const Resources: React.FC<Props> = ({ open, small, buttonClassName }) => 
                             Featured
                         </div>
                         <div className={classes.frame}>
-                            {Object.values(Links.CardData).map(docs => {
+                            {Object.values(Links.CardData).map(data => {
                                 return (
                                     <div className={classes.div1}>
-                                        <Card image={docs.image} heading={docs.heading} description={docs.description} contentType={docs.contentType} />
+                                        <ResourceItems description={data.description} image={data.image} heading={data.heading} contentType={data.contentType} url={data.url}
+                                        />
                                     </div>
                                 );
                             })}

@@ -227,16 +227,16 @@ const ResourcesLinks: Record<
 // Card
 const CardData = [
   {
-    image: "src\\assets\\images\\blog1.png", heading: "CE.SDK v1.13 Release Notes", description: "Control time and duration of your visuals in videos, enjoy enhanced group and selection behavior, and fine-tune your editor with this new configuration.", contentType: "Blog"
+    image: "src\\assets\\images\\blog1.png", heading: "CE.SDK v1.13 Release Notes", description: "Control time and duration of your visuals in videos, enjoy enhanced group and selection behavior, and fine-tune your editor with this new configuration.", contentType: "Blog", url: "https://img.ly/blog/creative-editor-sdk-v_1_13_0-release-notes/"
   },
   {
-    image: "src\\assets\\images\\blog2.png", heading: "IMG.LY Announces Open Source JavaScript Library for In-Browser Background Removal", description: "Seamlessly remove backgrounds in-browser with ease. Empower your creativity and protect data privacy. Learn how!", contentType: "Blog"
+    image: "src\\assets\\images\\blog2.png", heading: "IMG.LY Announces Open Source JavaScript Library for In-Browser Background Removal", description: "Seamlessly remove backgrounds in-browser with ease. Empower your creativity and protect data privacy. Learn how!", contentType: "Blog", url: "https://img.ly/blog/announcing-imgly-background-removal/"
   },
   {
-    image: "src\\assets\\images\\blog3.png", heading: "CE.SDK v1.12 Release", description: "Effortlessly auto-resize designs, enhance readability, achieve perfect alignment, and more! With CE.SDK v1.12.", contentType: "Blog"
+    image: "src\\assets\\images\\blog3.png", heading: "CE.SDK v1.12 Release", description: "Effortlessly auto-resize designs, enhance readability, achieve perfect alignment, and more! With CE.SDK v1.12.", contentType: "Blog", url: "https://img.ly/blog/creative-editor-sdk-v_1_12_0-release-notes/"
   },
   {
-    image: "src\\assets\\images\\blog4.png", heading: "IMG.LY Partners with Soundstripe to Infuse Video Editing with Epic Royalty-Free Music & SFX", description: "Elevated storytelling and captivating viewers is everything: unlock the ultimate video editing experience with this integration.", contentType: "Blog"
+    image: "src\\assets\\images\\blog4.png", heading: "IMG.LY Partners with Soundstripe to Infuse Video Editing with Epic Royalty-Free Music & SFX", description: "Elevated storytelling and captivating viewers is everything: unlock the ultimate video editing experience with this integration.", contentType: "Blog", url: "https://img.ly/blog/img-ly-partners-with-soundstripe/"
   }
 ];
 

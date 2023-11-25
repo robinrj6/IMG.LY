@@ -1,0 +1,18 @@
+@use "../../../styles/mixins" as *;
+@use "../../../styles/typography" as *;
+
+
+.anchor {
+    @include focus;
+    text-decoration: none;
+    color: inherit;
+
+    &:hover {
+        text-decoration: none;
+        background-color: var(--imgly-button-text-hover-bg);
+    }
+
+    & > *:hover {
+        background-color: inherit; // Reset to default background color on hover
+    }
+}
