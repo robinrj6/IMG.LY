@@ -62,7 +62,12 @@ export const Resources: React.FC<Props> = ({ open, small, buttonClassName }) => 
                             {Object.values(Links.CardData).map(data => {
                                 return (
                                     <div className={classes.div1}>
-                                        <ResourceItems description={data.description} image={data.image} heading={data.heading} contentType={data.contentType} url={data.url}
+                                        <ResourceItems
+                                            description={data.description}
+                                            image={data.image}
+                                            heading={data.heading}
+                                            contentType={data.contentType}
+                                            url={data.url}
                                         />
                                     </div>
                                 );

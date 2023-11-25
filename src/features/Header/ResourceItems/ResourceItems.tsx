@@ -4,8 +4,6 @@ import classes from './style.module.scss';
 import { Card } from "../../../components/Card";
 
 interface Props {
-    small?: boolean;
-    className?: string;
     image?: string;
     heading?: string;
     description?: string;
@@ -15,13 +13,20 @@ interface Props {
 
 
 const ResourceItems = forwardRef<HTMLAnchorElement, Props>(
-    ({ small, className, image, heading, description, contentType, url, ...props }, ref) => {
+    ({ image, heading, description, contentType, url, ...props }, ref) => {
         return (
             <div>
                 <a
+                    {...props}
+                    ref={ref}
                     className={classes.anchor}
                     href={url}>
-                    <Card image={image} heading={heading} description={description} contentType={contentType} />
+                    <Card
+                        image={image}
+                        heading={heading}
+                        description={description}
+                        contentType={contentType}
+                    />
                 </a>
             </div>
         )
