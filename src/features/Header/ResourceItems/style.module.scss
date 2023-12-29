@@ -1,9 +1,9 @@
-@use "../../../styles/mixins" as *;
-@use "../../../styles/typography" as *;
+@use "../../../styles/mixins";
+@use "../../../styles/typography";
 
 
 .anchor {
-    @include focus;
+    @include mixins.focus;
     text-decoration: none;
     color: inherit;
 
@@ -15,4 +15,10 @@
     & > *:hover {
         background-color: inherit; // Reset to default background color on hover
     }
+    &__is_small {
+        @include typography.imgly-button-small;
+    
+        height: 2rem;
+        padding: 0 0.75rem;
+      }
 }

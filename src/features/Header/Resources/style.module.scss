@@ -34,7 +34,10 @@
     text-transform: uppercase;
     line-height: 20px;
     letter-spacing: 0.42px;
-    word-wrap: break-word
+    word-wrap: break-word;
+    @include lg {
+        display: none;
+    }
 }
 
 .featured {
@@ -50,6 +53,9 @@
     width: auto;
     margin: 1.5rem;
     border-radius: 8px;
+    @include lg {
+        display: none; 
+    }
 }
 
 .frame {

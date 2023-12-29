@@ -29,7 +29,6 @@ export const Resources: React.FC<Props> = ({ open, small, buttonClassName }) => 
                 small={small}
             >
                 <div className={classes.wrapper}>
-
                     <List className={classes.container}>
                         {Object.values(Links.ResourcesLinks).map(data => {
                             const items = data.map(({ name, url }) => {
